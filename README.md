@@ -8,8 +8,14 @@ When creating this game, I always prioritized good code architecture and created
 
 ---
 
-# AI Script C#
+## AI Script C#
 
-# Player Inventory Script C#
+This script is a custom navigation system that utilizes context-based steering and is the basis for enemy and friendly AI.
 
-# Serialization Manager Script C#
+The system works by shooting a ring of raycasts with weights associated with them. The dot product of the ray direction and the direction to the target is used as the base weight. From there, weights are reduced based on their closeness to obstacles which is propagated to nearby weights. Other contributions will either add or decrease weights, and the AI system moves the object in the direction of the highest weight.
+
+Implements two movement modes. The Direct mode moves the object directly towards the target. The Circle mode moves the object within a certain range and then applies a shaping function to the weights to circle around the target.
+
+## Player Inventory Script C#
+
+## Serialization Manager Script C#
