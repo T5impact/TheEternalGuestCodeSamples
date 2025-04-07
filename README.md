@@ -22,4 +22,16 @@ Designed for ease of use by allowing target based on transform and target based 
 
 This script handles the player inventory with four different inventory types.
 
+Implements a fixed-size inventory for weapons and items using an array data structure. Allows for same-item stacking with stack limits and easy adding and removing items.
+
+Implements a flexible inventory for abilities and specials with no stacking using a list data structure.
+
+Uses an item database of Scriptable Objects for referencing items rather than creating copies or storing the objects directly.
+
 ## Serialization Manager Script C#
+
+This script handles saving game data to a JSON file format.
+
+Saves all necessary game data including all four player inventory types into a single JSON save file.
+
+Allows for multiple save files that can saved, loaded, and deleted at will.
